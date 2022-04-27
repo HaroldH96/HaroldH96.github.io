@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, HTML,css,python">
+    <meta name="keywords" content="Python爬虫笔记03-爬虫的基本原理, HTML,css,python">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Harold</title>
+    <title>Python爬虫笔记03-爬虫的基本原理 | Harold</title>
     <link rel="icon" type="image/png" href="/%E8%9C%98%E8%9B%9B%E7%BD%91.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -259,12 +259,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">Python爬虫笔记03-爬虫的基本原理</h1>
                 </div>
             </div>
         </div>
@@ -378,12 +378,33 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%88%AC%E8%99%AB/">
+                                <span class="chip bg-color">爬虫</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Python/" class="post-category">
+                                Python
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -392,7 +413,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-26
+                    2022-04-27
                 </div>
                 
 
@@ -401,14 +422,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -423,19 +444,43 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
+                <h1 id="03-原理探究，了解爬虫的基本原理"><a href="#03-原理探究，了解爬虫的基本原理" class="headerlink" title="03-原理探究，了解爬虫的基本原理"></a>03-原理探究，了解爬虫的基本原理</h1><p>我们可以把互联网比作一张大网，而爬虫（即网络爬虫）便是在网上爬行的蜘蛛。如果把网的节点比作一个个网页，爬虫爬到这 就相当于访问了该页面，获取了其信息。可以把节点间的连线比作网页与网页之间的链接关系，这样蜘蛛通过一个节点后，可以 顺着节点连线继续爬行到达下一个节点，即通过一个网页继续获取后续的网页，这样整个网的节点便可以被蜘蛛全部爬行到，网 站的数据就可以被抓取下来了。  </p>
+<h2 id="爬虫概述"><a href="#爬虫概述" class="headerlink" title="爬虫概述"></a>爬虫概述</h2><p> 简单来说，爬虫就是获取网页并提取和保存信息的自动化程序。</p>
+<h2 id="获取网页"><a href="#获取网页" class="headerlink" title="获取网页"></a>获取网页</h2><p> 爬虫首先要做的工作就是 <strong>获取网页</strong>，这里就是获取网页的源代码。</p>
+<p> <strong>源代码里包含了网页的部分有用信息，所以只要把源代码获取下来，就可以从中提取想要的信息了。</strong> 前面讲了请求和响应的概念，向网站的服务器发送一个请求，返回的响应体便是网页源代码。</p>
+<p>所以，最关键的部分就是<strong>构造一个请求并发送给服务器</strong>，然后<strong>接收到响应并将其解析出来</strong>，那么这个流程怎样实现呢？总不能手工去截取网页源码吧？ </p>
+<p>不用担心，Python提供了许多库来帮助我们实现这个操作，如 <strong>urllib、requests</strong> 等。我们可以用这些库来帮助我们实现 HTTP 请求操作，请求和响应都可以用类库提供的数据结构来表示，得到响应之后只需要解析数据结构中的 Body部分即可，即得到网页的源代码，这样我们可以用程序来实现获取网页的过程了。  </p>
+<h2 id="提取信息"><a href="#提取信息" class="headerlink" title="提取信息"></a>提取信息</h2><p>获取网页源代码后，接下来就是<strong>分析网页源代码</strong>，从中<strong>提取想要的数据</strong>。</p>
+<p>首先，<strong>最通用的方法</strong>便是<strong>采用正则表达式提取</strong>，这是一个万能的方法，但是<strong>在构造正则表达式时比较复杂且容易出错</strong>。<br>另外，由于网页的结构有一定的规则，所以还有一些<strong>根据网页节点属性</strong>、<strong>CSS 选择器</strong>或 XPath来提取网页信息的库，<br>如 <strong>Beautiful Soup、pyquery、lxml</strong>等。</p>
+<p>使用这些库，我们可以高效快速地从中提取网页信息，如节点的属性、文本值等。<br>提取信息是爬虫非常重要的部分，它可以使杂乱的数据变得条理清晰，以便我们后续处理和分析数据。  </p>
+<h2 id="保存数据"><a href="#保存数据" class="headerlink" title="保存数据"></a>保存数据</h2><p>提取信息后，我们一般会将提取到的数据保存到某处以便后续使用。<br>这里保存形式有多种多样，如可以<strong>简单保存为 TXT文本或 JSON 文本</strong>，<br>也可以<strong>保存到数据库</strong>，如 <strong>MySQL和 MongoDB</strong> 等，<br>还可<strong>保存至远程服务器</strong>，如借助 SFTP 进行操作等。 </p>
+<h2 id="自动化程序"><a href="#自动化程序" class="headerlink" title="自动化程序"></a>自动化程序</h2><p>手工可以提取这些信息，但是当量特别大或者想快速获取大量数据的话，就要借助程序。<br><strong>爬虫</strong>就是代替我们来完成这份爬取工作的自动化程序，<br>它<strong>可以在抓取过程中进行各种异常处理、错误重试等操作，确保爬取持续高效地运行</strong>。 </p>
+<h2 id="能抓怎样的数据"><a href="#能抓怎样的数据" class="headerlink" title="能抓怎样的数据"></a>能抓怎样的数据</h2><p>在网页中我们能看到各种各样的信息，最常见的便是<strong>常规网页</strong>，<br>它们<strong>对应着 HTML代码</strong>，而<strong>最常抓取的便是 HTML源代码</strong>。<br><strong>有些网页返回的不是 HTML代码，而是一个 JSON 字符串</strong>（其中 <strong>API 接口大多采用这样的形式</strong>），<br>这种格式的数据方 便传输和解析，它们同样可以抓取，而且数据提取更加方便。<br>网页中还会看到看到各种二进制数据，如图片、视频和音频等。<br>利用爬虫，我们可以将这些二进制数据抓取下来，然后保存成 对应的文件名。<br>还有各种扩展名的文件，如 CSS、JavaScript 和配置文件等，<br>这些其实也是最普通的文件，<strong>只要在浏览器里面可以访问到，就可以将其抓取下来</strong>。 </p>
+<p>上述内容其实都<strong>对应各自的 URL</strong>，是<strong>基于 HTTP 或 HTTPS 协议</strong>的，只要是这种数据，<strong>爬虫都可以抓取</strong>。  </p>
+<h2 id="JavaScript-渲染页面"><a href="#JavaScript-渲染页面" class="headerlink" title="JavaScript 渲染页面"></a>JavaScript 渲染页面</h2><p>有时候，用 urllib 或 requests 抓取网页时，<strong>得到的源代码实际和浏览器中看到的不一样</strong>。<br>现在网页越来越多地采用 Ajax、前端模块化工具来构建，<br>整个网页可能都是由 JavaScript 渲染出来的，<br>也就是说<strong>原始的 HTML代码就是一个空壳</strong>，</p>
+<p>例如： </p>
+<pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>This is a Demo<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>在浏览器中打开这个页面时</p>
+<ul>
+<li>首先会加载这个 HTML内容</li>
+<li>接着浏览器会发现其中引入了一个 app.js 文件</li>
+<li>然后便会接着去请求这个文件，获取到该文件后，便会执行其中的 JavaScript 代码</li>
+<li>而 JavaScript 则会改变 HTML中的节点，向其添加内容</li>
+<li>最后得到 完整的页面。</li>
+</ul>
+<p>因此，使用基本 HTTP 请求库得到的源代码可能跟浏览器中的页面源代码不太一样。<br>对于这样的情况，<strong>可以分析其后台 Ajax 接口，也可使用 Selenium、Splash这样的库来实现模拟 JavaScript 渲染</strong>。 </p>
 
                 
             </div>
@@ -462,7 +507,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://HaroldH96.github.io/2022/04/26/hello-world/">http://HaroldH96.github.io/2022/04/26/hello-world/</a>
+                    <a href="http://HaroldH96.github.io/2022/04/27/python-pa-chong-bi-ji-03-pa-chong-de-ji-ben-yuan-li/">http://HaroldH96.github.io/2022/04/27/python-pa-chong-bi-ji-03-pa-chong-de-ji-ben-yuan-li/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -499,7 +544,19 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%88%AC%E8%99%AB/">
+                                    <span class="chip bg-color">爬虫</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -667,50 +724,56 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/04/26/hexo-theme-matery-zhu-ti-pei-zhi/">
+                <a href="/2022/04/27/python-pa-chong-bi-ji-03-pa-chong-de-ji-ben-yuan-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="hexo-theme-matery主题配置">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Python爬虫笔记03-爬虫的基本原理">
                         
-                        <span class="card-title">hexo-theme-matery主题配置</span>
+                        <span class="card-title">Python爬虫笔记03-爬虫的基本原理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这是关于 hexo-theme-matery 主题的配置
+                            52讲轻松搞定网络爬虫 模块一：爬虫基本原理 03-原理探究，了解爬虫的基本原理
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/hexo/" class="post-category">
-                                    hexo
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/%E4%B8%BB%E9%A2%98/">
-                        <span class="chip bg-color">主题</span>
+                    <a href="/tags/%E7%88%AC%E8%99%AB/">
+                        <span class="chip bg-color">爬虫</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
                     </a>
                     
                 </div>
@@ -721,37 +784,56 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/04/26/hello-world/">
+                <a href="/2022/04/27/python-pa-chong-bi-ji-02-web-wang-ye-ji-chu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Python爬虫笔记02-Web网页基础">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">Python爬虫笔记02-Web网页基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            52讲轻松搞定网络爬虫 模块一：爬虫基本原理 02-夯实根基，Web网页基础
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-27
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Harold
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%88%AC%E8%99%AB/">
+                        <span class="chip bg-color">爬虫</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
