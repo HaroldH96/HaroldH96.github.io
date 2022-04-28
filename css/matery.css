@@ -206,6 +206,7 @@ kbd {
 b,
 strong {
     font-weight: bold;
+    color: red;     /*　加粗字体变红　*/
 }
 
 dfn {
@@ -253,6 +254,7 @@ mark {
     color: #fff;
 }
 
+/* 下方进度条的颜色和宽度 */
 .progress-bar {
     height: 4px;
     position: fixed;
@@ -1228,14 +1230,15 @@ article .article-tags .chip {
     overflow: auto;
 }
 
-/**
+*
 #articleContent table,
 th,
 td {
     padding: 12px 13px;
-    border: 1px solid #dfe2e5;
+    /*border: 1px solid #dfe2e5;*/
+    color: grey;    /* 表格文字变灰色，夜间模式更清晰 */
 }
-**/
+*
 
 table tr:nth-child(2n),
 thead {
@@ -2230,6 +2233,14 @@ body.DarkMode .toc-widget .toc-list-item {
 body.DarkMode .skillbar .skill-bar-percent {
     color: #000;
 }
+
+
+/* 尝试修改夜间模式表格的背景色 */
+/*body.DarkMode table tr:nth-child(2n),
+body.DarkMode thead {
+    background-color: #fafafa;
+}
+*/
 
 /* 黑夜模式动画 */
 .Cuteen_DarkSky,
