@@ -532,19 +532,19 @@ WIDGET = {
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2><pre class=" language-bash"><code class="language-bash">$ hexo init <span class="token punctuation">[</span>folder<span class="token punctuation">]</span>
-</code></pre>
+                <h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo init <span class="token punctuation">[</span>folder<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>新建一个网站。如果没有设置 <code>folder</code> ，Hexo 默认在目前的文件夹建立网站。</p>
 <p>本命令相当于执行了以下几步：</p>
 <ol>
 <li>Git clone <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-starter">hexo-starter</a> 和 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-theme-landscape">hexo-theme-landscape</a> 主题到当前目录或指定目录。</li>
 <li>使用 <a target="_blank" rel="noopener" href="https://classic.yarnpkg.com/lang/en/">Yarn 1</a>、<a target="_blank" rel="noopener" href="https://pnpm.js.org/">pnpm</a> 或 <a target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/install">npm</a> 包管理器下载依赖（如有已安装多个，则列在前面的优先）。npm 默认随 <a target="_blank" rel="noopener" href="https://hexo.io/docs/#Install-Node-js">Node.js</a> 安装。</li>
 </ol>
-<h2 id="new"><a href="#new" class="headerlink" title="new"></a>new</h2><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token punctuation">[</span>layout<span class="token punctuation">]</span> <span class="token operator">&lt;</span>title<span class="token operator">></span>
-</code></pre>
+<h2 id="new"><a href="#new" class="headerlink" title="new"></a>new</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token punctuation">[</span>layout<span class="token punctuation">]</span> <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>新建一篇文章。如果没有设置 <code>layout</code> 的话，默认使用 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">_config.yml</a> 中的 <code>default_layout</code> 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
-<pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"post title with whitespace"</span>
-</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"post title with whitespace"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <table>
 <thead>
 <tr>
@@ -566,15 +566,15 @@ WIDGET = {
 </tr>
 </tbody></table>
 <p>默认情况下，Hexo 会使用文章的标题来决定文章文件的路径。对于独立页面来说，Hexo 会创建一个以标题为名字的目录，并在目录中放置一个 <code>index.md</code> 文件。你可以使用 <code>--path</code> 参数来覆盖上述行为、自行决定文件的目录：</p>
-<pre class=" language-bash"><code class="language-bash">hexo new page --path about/me <span class="token string">"About me"</span>
-</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page --path about/me <span class="token string">"About me"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>以上命令会创建一个 <code>source/about/me.md</code> 文件，同时 Front Matter 中的 title 为 <code>"About me"</code></p>
 <p>注意！title 是必须指定的！如果你这么做并不能达到你的目的：</p>
-<pre class=" language-bash"><code class="language-bash">hexo new page --path about/me
-</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page --path about/me<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>此时 Hexo 会创建 <code>source/_posts/about/me.md</code>，同时 <code>me.md</code> 的 Front Matter 中的 title 为 <code>"page"</code>。这是因为在上述命令中，hexo-cli 将 <code>page</code> 视为指定文章的标题、并采用默认的 <code>layout</code>。</p>
-<h2 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h2><pre class=" language-bash"><code class="language-bash">$ hexo generate
-</code></pre>
+<h2 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>生成静态文件。</p>
 <table>
 <thead>
@@ -605,13 +605,13 @@ WIDGET = {
 </tr>
 </tbody></table>
 <p>该命令可以简写为</p>
-<pre class=" language-bash"><code class="language-bash">$ hexo g
-</code></pre>
-<h2 id="publish"><a href="#publish" class="headerlink" title="publish"></a>publish</h2><pre class=" language-bash"><code class="language-bash">$ hexo publish <span class="token punctuation">[</span>layout<span class="token punctuation">]</span> <span class="token operator">&lt;</span>filename<span class="token operator">></span>
-</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="publish"><a href="#publish" class="headerlink" title="publish"></a>publish</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo publish <span class="token punctuation">[</span>layout<span class="token punctuation">]</span> <span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>发表草稿。</p>
-<h2 id="server"><a href="#server" class="headerlink" title="server"></a>server</h2><pre class=" language-bash"><code class="language-bash">$ hexo server
-</code></pre>
+<h2 id="server"><a href="#server" class="headerlink" title="server"></a>server</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>启动服务器。默认情况下，访问网址为： <code>http://localhost:4000/</code>。</p>
 <table>
 <thead>
@@ -633,8 +633,8 @@ WIDGET = {
 <td align="left">启动日记记录，使用覆盖记录格式</td>
 </tr>
 </tbody></table>
-<h2 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h2><pre class=" language-bash"><code class="language-bash">$ hexo deploy
-</code></pre>
+<h2 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>部署网站。</p>
 <table>
 <thead>
@@ -649,10 +649,10 @@ WIDGET = {
 </tr>
 </tbody></table>
 <p>该命令可以简写为：</p>
-<pre class=" language-bash"><code class="language-bash">$ hexo d
-</code></pre>
-<h2 id="render"><a href="#render" class="headerlink" title="render"></a>render</h2><pre class=" language-bash"><code class="language-bash">$ hexo render <span class="token operator">&lt;</span>file1<span class="token operator">></span> <span class="token punctuation">[</span>file2<span class="token punctuation">]</span> <span class="token punctuation">..</span>.
-</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="render"><a href="#render" class="headerlink" title="render"></a>render</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo render <span class="token operator">&lt;</span>file<span class="token operator"><span class="token file-descriptor important">1</span>&gt;</span> <span class="token punctuation">[</span>file2<span class="token punctuation">]</span> <span class="token punctuation">..</span>.<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>渲染文件。</p>
 <table>
 <thead>
@@ -666,77 +666,78 @@ WIDGET = {
 <td align="left">设置输出路径</td>
 </tr>
 </tbody></table>
-<h2 id="migrate"><a href="#migrate" class="headerlink" title="migrate"></a>migrate</h2><pre class=" language-bash"><code class="language-bash">$ hexo migrate <span class="token operator">&lt;</span>type<span class="token operator">></span>
-</code></pre>
+<h2 id="migrate"><a href="#migrate" class="headerlink" title="migrate"></a>migrate</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo migrate <span class="token operator">&lt;</span>type<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>从其他博客系统 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/migration">迁移内容</a>。</p>
-<h2 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h2><pre class=" language-bash"><code class="language-bash">$ hexo clean
-</code></pre>
+<h2 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo clean<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>清除缓存文件 (<code>db.json</code>) 和已生成的静态文件 (<code>public</code>)。</p>
 <p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
-<h2 id="list"><a href="#list" class="headerlink" title="list"></a>list</h2><pre class=" language-bash"><code class="language-bash">$ hexo list <span class="token operator">&lt;</span>type<span class="token operator">></span>
-</code></pre>
+<h2 id="list"><a href="#list" class="headerlink" title="list"></a>list</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo list <span class="token operator">&lt;</span>type<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>列出网站资料。</p>
-<h2 id="version"><a href="#version" class="headerlink" title="version"></a>version</h2><pre class=" language-bash"><code class="language-bash">$ hexo version
-</code></pre>
+<h2 id="version"><a href="#version" class="headerlink" title="version"></a>version</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>显示 Hexo 版本。</p>
-<h2 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h2><h3 id="安全模式"><a href="#安全模式" class="headerlink" title="安全模式"></a>安全模式</h3><pre class=" language-bash"><code class="language-bash">$ hexo --safe
-</code></pre>
+<h2 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h2><h3 id="安全模式"><a href="#安全模式" class="headerlink" title="安全模式"></a>安全模式</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo --safe<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>在安全模式下，不会载入插件和脚本。当您在安装新插件遭遇问题时，可以尝试以安全模式重新执行。</p>
-<h3 id="调试模式"><a href="#调试模式" class="headerlink" title="调试模式"></a>调试模式</h3><pre class=" language-bash"><code class="language-bash">$ hexo --debug
-</code></pre>
+<h3 id="调试模式"><a href="#调试模式" class="headerlink" title="调试模式"></a>调试模式</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo --debug<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>在终端中显示调试信息并记录到 <code>debug.log</code>。当您碰到问题时，可以尝试用调试模式重新执行一次，并 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues/new">提交调试信息到 GitHub</a>。</p>
-<h3 id="简洁模式"><a href="#简洁模式" class="headerlink" title="简洁模式"></a>简洁模式</h3><pre class=" language-bash"><code class="language-bash">$ hexo --silent
-</code></pre>
+<h3 id="简洁模式"><a href="#简洁模式" class="headerlink" title="简洁模式"></a>简洁模式</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo --silent<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>隐藏终端信息。</p>
-<h3 id="自定义配置文件的路径"><a href="#自定义配置文件的路径" class="headerlink" title="自定义配置文件的路径"></a>自定义配置文件的路径</h3><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 使用 custom.yml 代替默认的 _config.yml</span>
+<h3 id="自定义配置文件的路径"><a href="#自定义配置文件的路径" class="headerlink" title="自定义配置文件的路径"></a>自定义配置文件的路径</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 使用 custom.yml 代替默认的 _config.yml</span>
 $ hexo server --config custom.yml
 
-<span class="token comment" spellcheck="true"># 使用 custom.yml 和 custom2.json，其中 custom2.json 优先级更高</span>
-$ hexo generate --config custom.yml,custom2.json,custom3.yml
-</code></pre>
+<span class="token comment"># 使用 custom.yml 和 custom2.json，其中 custom2.json 优先级更高</span>
+$ hexo generate --config custom.yml,custom2.json,custom3.yml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>自定义配置文件的路径，指定这个参数后将不再使用默认的 <code>_config.yml</code>。<br>你可以使用一个 YAML 或 JSON 文件的路径，也可以使用逗号分隔（无空格）的多个 YAML 或 JSON 文件的路径。例如：</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 使用 custom.yml 代替默认的 _config.yml</span>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 使用 custom.yml 代替默认的 _config.yml</span>
 $ hexo server --config custom.yml
 
-<span class="token comment" spellcheck="true"># 使用 custom.yml, custom2.json 和 custom3.yml，其中 custom3.yml 优先级最高，其次是 custom2.json</span>
-$ hexo generate --config custom.yml,custom2.json,custom3.yml
-</code></pre>
+<span class="token comment"># 使用 custom.yml, custom2.json 和 custom3.yml，其中 custom3.yml 优先级最高，其次是 custom2.json</span>
+$ hexo generate --config custom.yml,custom2.json,custom3.yml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>当你指定了多个配置文件以后，Hexo 会按顺序将这部分配置文件合并成一个 <code>_multiconfig.yml</code>。如果遇到重复的配置，排在后面的文件的配置会覆盖排在前面的文件的配置。这个原则适用于任意数量、任意深度的 YAML 和 JSON 文件。</p>
-<h3 id="显示草稿"><a href="#显示草稿" class="headerlink" title="显示草稿"></a>显示草稿</h3><pre class=" language-bash"><code class="language-bash">$ hexo --draft
-</code></pre>
+<h3 id="显示草稿"><a href="#显示草稿" class="headerlink" title="显示草稿"></a>显示草稿</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo --draft<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>显示 <code>source/_drafts</code> 文件夹中的草稿文章。</p>
-<h3 id="自定义-CWD"><a href="#自定义-CWD" class="headerlink" title="自定义 CWD"></a>自定义 CWD</h3><pre class=" language-bash"><code class="language-bash">$ hexo --cwd /path/to/cwd
-</code></pre>
+<h3 id="自定义-CWD"><a href="#自定义-CWD" class="headerlink" title="自定义 CWD"></a>自定义 CWD</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo --cwd /path/to/cwd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>自定义当前工作目录（Current working directory）的路径。</p>
-<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="指令说明"><a href="#指令说明" class="headerlink" title="指令说明"></a>指令说明</h3><pre class=" language-bash"><code class="language-bash">hexo server <span class="token comment" spellcheck="true">#启动本地服务器，用于预览主题。Hexo 会监视文件变动并自动更新，除修改站点配置文件外,无须重启服务器,直接刷新网页即可生效。</span>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="指令说明"><a href="#指令说明" class="headerlink" title="指令说明"></a>指令说明</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo server <span class="token comment">#启动本地服务器，用于预览主题。Hexo 会监视文件变动并自动更新，除修改站点配置文件外,无须重启服务器,直接刷新网页即可生效。</span>
 
-hexo server -s <span class="token comment" spellcheck="true">#以静态模式启动</span>
+hexo server -s <span class="token comment">#以静态模式启动</span>
 
-hexo server -p 5000 <span class="token comment" spellcheck="true">#更改访问端口 (默认端口为4000，'ctrl + c’关闭server)</span>
+hexo server -p <span class="token number">5000</span> <span class="token comment">#更改访问端口 (默认端口为4000，'ctrl + c’关闭server)</span>
 
-hexo server -i IP地址 <span class="token comment" spellcheck="true">#自定义 IP</span>
+hexo server -i IP地址 <span class="token comment">#自定义 IP</span>
 
-hexo clean <span class="token comment" spellcheck="true">#清除缓存 ,网页正常情况下可以忽略此条命令,执行该指令后,会删掉站点根目录下的public文件夹</span>
+hexo clean <span class="token comment">#清除缓存 ,网页正常情况下可以忽略此条命令,执行该指令后,会删掉站点根目录下的public文件夹</span>
 
-hexo g <span class="token comment" spellcheck="true">#生成静态网页 (执行 $ hexo g后会在站点根目录下生成public文件夹, hexo会将"/blog/source/" 下面的.md后缀的文件编译为.html后缀的文件,存放在"/blog/public/ " 路径下)</span>
+hexo g <span class="token comment">#生成静态网页 (执行 $ hexo g后会在站点根目录下生成public文件夹, hexo会将"/blog/source/" 下面的.md后缀的文件编译为.html后缀的文件,存放在"/blog/public/ " 路径下)</span>
 
-hexo d <span class="token comment" spellcheck="true">#自动生成网站静态文件，并将本地数据部署到设定的仓库(如github)</span>
+hexo d <span class="token comment">#自动生成网站静态文件，并将本地数据部署到设定的仓库(如github)</span>
 
-hexo init 文件夹名称 <span class="token comment" spellcheck="true">#初始化XX文件夹名称</span>
+hexo init 文件夹名称 <span class="token comment">#初始化XX文件夹名称</span>
 
-<span class="token function">npm</span> update hexo -g<span class="token comment" spellcheck="true">#升级</span>
+<span class="token function">npm</span> update hexo -g<span class="token comment">#升级</span>
 
-<span class="token function">npm</span> <span class="token function">install</span> hexo -g <span class="token comment" spellcheck="true">#安装</span>
+<span class="token function">npm</span> <span class="token function">install</span> hexo -g <span class="token comment">#安装</span>
 
-node-v <span class="token comment" spellcheck="true">#查看node.js版本号</span>
+node-v <span class="token comment">#查看node.js版本号</span>
 
-<span class="token function">npm</span> -v <span class="token comment" spellcheck="true">#查看npm版本号</span>
+<span class="token function">npm</span> -v <span class="token comment">#查看npm版本号</span>
 
-<span class="token function">git</span> --version <span class="token comment" spellcheck="true">#查看git版本号</span>
+<span class="token function">git</span> --version <span class="token comment">#查看git版本号</span>
 
-hexo -v <span class="token comment" spellcheck="true">#查看hexo版本号</span>
-</code></pre>
-<h3 id="简写指令"><a href="#简写指令" class="headerlink" title="简写指令"></a>简写指令</h3><pre class=" language-bash"><code class="language-bash">hexo n <span class="token string">"我的第一篇文章"</span> 等价于 hexo new <span class="token string">"我的第一篇文章"</span> 还等价于 hexo new post <span class="token string">"我的第一篇文章"</span>
+hexo -v <span class="token comment">#查看hexo版本号</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="简写指令"><a href="#简写指令" class="headerlink" title="简写指令"></a>简写指令</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo n <span class="token string">"我的第一篇文章"</span> 等价于 hexo new <span class="token string">"我的第一篇文章"</span> 还等价于 hexo new post <span class="token string">"我的第一篇文章"</span>
 
 hexo p 等价于 hexo publish
 
@@ -749,7 +750,8 @@ hexo d 等价于 hexo deploy
 hexo g -d等价于hexo generate --deploy
 
 注: hexo clean 没有 简写, <span class="token function">git</span> --version 没有简写
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h2 id=""><a href="#" class="headerlink" title=""></a></h2>
                 
             </div>
@@ -1275,7 +1277,7 @@ hexo g -d等价于hexo generate --deploy
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">19.1k</span>&nbsp;字
+                class="white-color">19.2k</span>&nbsp;字
             
             
             

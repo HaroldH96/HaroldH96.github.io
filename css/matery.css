@@ -206,7 +206,7 @@ kbd {
 b,
 strong {
     font-weight: bold;
-    color: red;     /*　加粗字体变红　*/
+    color: green;     /*　加粗字体绿色　*/
 }
 
 dfn {
@@ -2218,6 +2218,16 @@ body.DarkMode .aplayer {
 body.DarkMode img,
 body.DarkMode strong {
     filter: brightness(0.7);
+    color: lawngreen;   /* 加粗字体夜间模式改为 lawngreen 色 */
+}
+
+/* center标签内字体颜色夜间模式改为 DeepSkyBlue 色 */
+body.DarkMode center {
+    color: DeepSkyBlue;
+}
+
+body.DarkMode blockquote {
+    color: rgba(255, 255, 255, 0.6);
 }
 
 /*toc目录滤镜*/
