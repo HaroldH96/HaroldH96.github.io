@@ -31,7 +31,7 @@
 
 <meta name="generator" content="Hexo 6.1.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+</head>
 
 
 
@@ -49,6 +49,8 @@
 <body>
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
+        <!-- 和风天气插件 -->
+        <div id="he-plugin-simple"></div>
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
@@ -318,6 +320,34 @@
 
 </header>
 
+
+<script>
+WIDGET = {
+  "CONFIG": {
+    "modules": "01234",
+    "background": "1",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "FFFFFF",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "10",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "10",
+    "top": "15",
+    "key": "9c5ac579913f4fe092fff8ea56d77f9b"
+  }
+}
+</script>
+<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
     
 
 
@@ -502,18 +532,21 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="02：夯实基础，Web网页基础"><a href="#02：夯实基础，Web网页基础" class="headerlink" title="02：夯实基础，Web网页基础"></a>02：夯实基础，Web网页基础</h1><h2 id="网页的组成"><a href="#网页的组成" class="headerlink" title="网页的组成"></a>网页的组成</h2><p>网页可以分为三大部分： <strong>HTML、CSS、JavaScript</strong></p>
+                <h1 id="02：夯实基础，Web网页基础"><a href="#02：夯实基础，Web网页基础" class="headerlink" title="02：夯实基础，Web网页基础"></a>02：夯实基础，Web网页基础</h1><h2 id="2-1-网页的组成"><a href="#2-1-网页的组成" class="headerlink" title="2.1 网页的组成"></a>2.1 网页的组成</h2><p>网页可以分为三大部分： <strong>HTML、CSS、JavaScript</strong></p>
 <ul>
 <li><strong>HTML</strong>相当于骨架</li>
 <li><strong>JavaScript</strong>相当于肌肉</li>
 <li><strong>CSS</strong>相当于皮肤</li>
 </ul>
-<h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><p><strong>HTML</strong>是用来描述网页的一种语言<br>全称 Hyper Text Markup Language <strong>超文本标记语言</strong></p>
+<h3 id="2-1-1-HTML"><a href="#2-1-1-HTML" class="headerlink" title="2.1.1 HTML"></a>2.1.1 HTML</h3><p><strong>HTML</strong>是用来描述网页的一种语言<br>全称 Hyper Text Markup Language <strong>超文本标记语言</strong></p>
 <p><strong>不同类型的元素通过不同类型的标签来表示：</strong></p>
 <ul>
 <li>图片用 img 标签表示</li>
@@ -522,7 +555,7 @@
 <li>它们之间的布局又常通过布局标签 div 嵌套组合而成</li>
 </ul>
 <p><img src="/2022/04/27/python-pa-chong-bi-ji-02-web-wang-ye-ji-chu/1651049540474.png" alt="标签示例"></p>
-<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><p> 虽然 HTML定义了网页的结构，但是只有 HTML页面的布局并不美观，可能只是简单的节点元素的排列，为了让网页看起来更好看一些，这里就需要借助 CSS 了。 </p>
+<h3 id="2-1-2-CSS"><a href="#2-1-2-CSS" class="headerlink" title="2.1.2 CSS"></a>2.1.2 CSS</h3><p> 虽然 HTML定义了网页的结构，但是只有 HTML页面的布局并不美观，可能只是简单的节点元素的排列，为了让网页看起来更好看一些，这里就需要借助 CSS 了。 </p>
 <p> <strong>CSS</strong>，全称叫作 Cascading Style Sheets，即<strong>层叠样式表</strong>。<br>“<strong>层叠</strong>”是指当在 HTML中引用了数个样式文件，并且样式发生冲突时，浏览器能依据层叠顺序处理。<br>“<strong>样式</strong>”指网页中文字大小、颜色、元素间距、排列等 格式。<br><strong>CSS</strong> 是目前唯一的网页页面排版样式标准，有了它的帮助，页面才会变得更为美观。 </p>
 <pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token id">#head_wrapper</span><span class="token class">.s-ps-islite</span> <span class="token class">.s-p-top</span> </span><span class="token punctuation">{</span>
 <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
@@ -532,7 +565,7 @@
 <span class="token punctuation">}</span>
 </code></pre>
 <p> 这就是一个 CSS 样式。大括号前面是一个 CSS 选择器。此选择器的作用是首先选中 id 为 head_wrapper 且 class 为 s-ps-islite 的节点，然后再选中其内部的 class 为 s-p-top 的节点。<br>大括号内部写的就是一条条样式规则，例如 position指定了这个元素的布局方式为绝对布局，bottom指定元素的下边距为 40 像素，width指定了宽度为 100% 占满父元素，height 则指定了元素的高度。<br>也就是说，我们将位置、宽度、高度等样式配置统一写成这样的形式，然后用大括号括起来，接着在开头再加上 CSS 选择器，这就代表这个样式对 CSS 选择器选中的元素生效，元素就会根据此样式来展示 了。<br>在<strong>网页</strong>中，一般会统一定义整个网页的样式规则，并写入 CSS 文件中（其后缀为 css）。<br>在 <strong>HTML</strong>中，只需要用 link 标签即可引入写好的 CSS 文件，这样整个页面就会变得美观、优雅。  </p>
-<h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><p><strong>JavaScript</strong>，简称 JS，是一种<strong>脚本语言</strong>。 </p>
+<h3 id="2-1-3-JavaScript"><a href="#2-1-3-JavaScript" class="headerlink" title="2.1.3 JavaScript"></a>2.1.3 JavaScript</h3><p><strong>JavaScript</strong>，简称 JS，是一种<strong>脚本语言</strong>。 </p>
 <p>在网页里可能会看到一些<strong>交互和动画效果</strong><br>如下载进度条、提示框、轮播图等，这通常就是利用 <strong>JavaScript</strong> </p>
 <p><strong>JavaScript <strong>使得用户与信息之间不只是一种浏览与显示的关系，<br>而是实现了一种</strong>实时、动态、交互</strong>的页面功能。 </p>
 <p>JavaScript <strong>通常也是以单独的文件形式加载</strong>的，后缀为 js，在 HTML中通过 script 标签即可引入 </p>
@@ -543,7 +576,7 @@
 <li><strong>CSS</strong> 描述了网页的布局</li>
 <li><strong>JavaScript</strong> 定义了网页的行为</li>
 </ul>
-<h2 id="网页的结构"><a href="#网页的结构" class="headerlink" title="网页的结构"></a>网页的结构</h2><p>了解了网页的基本组成，我们再用一个例子来感受下 HTML的基本结构。新建一个文本文件，名称可以自取，后缀为 html，内容如下： </p>
+<h2 id="2-2-网页的结构"><a href="#2-2-网页的结构" class="headerlink" title="2.2 网页的结构"></a>2.2 网页的结构</h2><p>了解了网页的基本组成，我们再用一个例子来感受下 HTML的基本结构。新建一个文本文件，名称可以自取，后缀为 html，内容如下： </p>
 <pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
@@ -576,7 +609,7 @@
 <li><strong>head</strong> 内定义网页的配置和引用</li>
 <li><strong>body</strong> 内定义网页的正文</li>
 </ul>
-<h2 id="节点树及节点间的关系"><a href="#节点树及节点间的关系" class="headerlink" title="节点树及节点间的关系"></a>节点树及节点间的关系</h2><p>在 HTML 中，<strong>所有标签定义的内容都是节点</strong>，它们构成了一个 HTML DOM 树</p>
+<h2 id="2-3-节点树及节点间的关系"><a href="#2-3-节点树及节点间的关系" class="headerlink" title="2.3 节点树及节点间的关系"></a>2.3 节点树及节点间的关系</h2><p>在 HTML 中，<strong>所有标签定义的内容都是节点</strong>，它们构成了一个 HTML DOM 树</p>
 <p><strong>DOM</strong> 是 W3C（万维网联盟）的标准，其英文全称 Document Object Model， 即<strong>文档对象模型</strong></p>
 <table>
 <thead>
@@ -606,7 +639,7 @@
 <p><img src="/2022/04/27/python-pa-chong-bi-ji-02-web-wang-ye-ji-chu/1651051647323.png" alt="节点树"></p>
 <p> 通过 HTMLDOM，树中的所有节点均可通过 JavaScript 访问，所有 HTML节点元素均可被修改，也可以被创建或删除。 </p>
 <p><strong>节点树中的节点彼此拥有层级关系</strong>。<br>常用父（parent）、子（child）和兄弟（sibling）等术语描述这些关系。<br>父节点拥有子节点，同级的子节点被称为兄弟节点。<br>顶端节点称为<strong>根（root）</strong>。<br>除了根节点之外，每个节点都有父节点，同时可拥有任意数量的子节点或兄弟节点。<br>本段参考 W3SCHOOL，链接：<a target="_blank" rel="noopener" href="http://www.w3school.com.cn/htmldom/dom_nodes.asp">http://www.w3school.com.cn/htmldom/dom_nodes.asp</a> 。 </p>
-<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><p>在 CSS 中，使用 <strong>CSS 选择器</strong>来定位节点</p>
+<h2 id="2-4-选择器"><a href="#2-4-选择器" class="headerlink" title="2.4 选择器"></a>2.4 选择器</h2><p>在 CSS 中，使用 <strong>CSS 选择器</strong>来定位节点</p>
 <pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 </code></pre>
 <p>表示为 <strong>#container</strong></p>
@@ -1119,7 +1152,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            52讲轻松搞定网络爬虫 模块一：爬虫基本原理 03-原理探究，了解爬虫的基本原理
+                            52讲轻松搞定网络爬虫 模块一：爬虫基本原理  03-原理探究，了解爬虫的基本原理
                         
                     </div>
                     <div class="publish-info">
@@ -1176,7 +1209,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            52讲轻松搞定网络爬虫 模块一：爬虫基本原理 01-必知必会，掌握HTTP基本原理
+                            52讲轻松搞定网络爬虫 模块一：爬虫基本原理  01-必知必会，掌握HTTP基本原理
                         
                     </div>
                     <div class="publish-info">
@@ -1347,8 +1380,6 @@
 <style>
     .aplayer .aplayer-lrc p {
         
-        display: none;
-        
         font-size: 12px;
         font-weight: 700;
         line-height: 16px !important;
@@ -1356,19 +1387,8 @@
 
     .aplayer .aplayer-lrc p.aplayer-lrc-current {
         
-        display: none;
-        
         font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
+        color: deeppink;
     }
 
     
@@ -1382,7 +1402,7 @@
                    id="6698809494"
                    fixed='true'
                    autoplay='false'
-                   theme='#42b983'
+                   theme='deeppink'
                    loop='all'
                    order='random'
                    preload='auto'
@@ -1410,7 +1430,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">12.9k</span>&nbsp;字
+                class="white-color">19.1k</span>&nbsp;字
             
             
             
@@ -1721,6 +1741,11 @@ $(function () {
 
 	
     
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
 
     
 
@@ -1730,6 +1755,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"right","hOffset":25,"vOffset":-20},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
 
 </html>

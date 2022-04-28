@@ -31,7 +31,7 @@
 
 <meta name="generator" content="Hexo 6.1.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+</head>
 
 
 
@@ -49,6 +49,8 @@
 <body>
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
+        <!-- 和风天气插件 -->
+        <div id="he-plugin-simple"></div>
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
@@ -318,6 +320,34 @@
 
 </header>
 
+
+<script>
+WIDGET = {
+  "CONFIG": {
+    "modules": "01234",
+    "background": "1",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "FFFFFF",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "10",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "10",
+    "top": "15",
+    "key": "9c5ac579913f4fe092fff8ea56d77f9b"
+  }
+}
+</script>
+<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
     
 
 
@@ -502,22 +532,25 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="01-必知必会，掌握HTTP基本原理"><a href="#01-必知必会，掌握HTTP基本原理" class="headerlink" title="01:必知必会，掌握HTTP基本原理"></a>01:必知必会，掌握HTTP基本原理</h1><h2 id="URI-和-URL"><a href="#URI-和-URL" class="headerlink" title="URI 和 URL"></a>URI 和 URL</h2><p><strong>URI</strong> 的全称为 Uniform Resource Identifier，即统一资源标志符，<br><strong>URL</strong>的全称为 Universal Resource Locator，即统一资源定位符。<br>举例来说，<a target="_blank" rel="noopener" href="https://github.com/favicon.ico">https://github.com/favicon.ico</a> ，它是一个 URL，也是一个 URI。即有这样的一个图标资源，我们用 URL/URI 来唯一指定了它的访问方式，这其中包括了访问协议 HTTPS、访问路径（即根目录）和资源名称 favicon.ico。通过这样一个链接，我们便可以从互联网上找到这个资源，这就是 URL/URI。</p>
+                <h1 id="01-必知必会，掌握HTTP基本原理"><a href="#01-必知必会，掌握HTTP基本原理" class="headerlink" title="01:必知必会，掌握HTTP基本原理"></a>01:必知必会，掌握HTTP基本原理</h1><h2 id="1-1-URI-和-URL"><a href="#1-1-URI-和-URL" class="headerlink" title="1.1 URI 和 URL"></a>1.1 URI 和 URL</h2><p><strong>URI</strong> 的全称为 Uniform Resource Identifier，即统一资源标志符，<br><strong>URL</strong>的全称为 Universal Resource Locator，即统一资源定位符。<br>举例来说，<a target="_blank" rel="noopener" href="https://github.com/favicon.ico">https://github.com/favicon.ico</a> ，它是一个 URL，也是一个 URI。即有这样的一个图标资源，我们用 URL/URI 来唯一指定了它的访问方式，这其中包括了访问协议 HTTPS、访问路径（即根目录）和资源名称 favicon.ico。通过这样一个链接，我们便可以从互联网上找到这个资源，这就是 URL/URI。</p>
 <h3 id="URI-和-URL-的关系"><a href="#URI-和-URL-的关系" class="headerlink" title="URI 和 URL 的关系"></a>URI 和 URL 的关系</h3><p>URL是 URI 的子集，也就是说每个 URL都是 URI，但不是每个 URI 都是 URL。那么，什么样的 URI 不是 URL呢？URI 还包括一个子类叫作 <strong>URN</strong>，它的全称为 Universal Resource Name，即统一资源名称。<br>URN 只命名资源而不指定如何定位资源，比如 urn:isbn:0451450523 指定了一本书的 ISBN，可以唯一标识这本书，但是没有指定到哪里定位这本书，这就是 URN。URL、URN 和 URI 的关系可以用图表示。<br>但是在目前的互联网，URN 的使用非常少，几乎所有的 URI 都是 URL，所以一般的网页链接我们可以称之为 URL，也可以称之为 URI，我个人习惯称之为 URL。</p>
 <p><img src="/2022/04/27/python-pa-chong-bi-ji-01-http-ji-ben-yuan-li/1651034197460.png" alt="URI与URL和URN的关系"></p>
-<h2 id="超文本"><a href="#超文本" class="headerlink" title="超文本"></a>超文本</h2><p><strong>超文本</strong> （Hypertext）<br>浏览器里看到的网页就是超文本解析而成的，其网页源代码是一系列 HTML 代码，里面包含了一系列标签<br>比如：</p>
+<h2 id="1-2-超文本"><a href="#1-2-超文本" class="headerlink" title="1.2 超文本"></a>1.2 超文本</h2><p><strong>超文本</strong> （Hypertext）<br>浏览器里看到的网页就是超文本解析而成的，其网页源代码是一系列 HTML 代码，里面包含了一系列标签<br>比如：</p>
 <ul>
 <li>img 显示图片</li>
 <li>p 指定显示段落等</li>
 </ul>
 <p>浏览器解析这些标签后，便形成了我们平常看到的网页，而<strong>网页的源代码 HTML 就可以称作超文本</strong></p>
 <p><img src="/2022/04/27/python-pa-chong-bi-ji-01-http-ji-ben-yuan-li/1651035846819.png" alt="网页源代码HTML"></p>
-<h2 id="HTTP-和HTTPS"><a href="#HTTP-和HTTPS" class="headerlink" title="HTTP 和HTTPS"></a>HTTP 和HTTPS</h2><p><a target="_blank" rel="noopener" href="https://www.taobao.com/">https://www.taobao.com/</a> 中，URL 的开头会有 http 或 https<br>这个就是访问资源需要的协议类型，又是还会看到 ftp、sftp、smb 开头的URL<br><strong>ftp、sftp、smb</strong> 都是指的<strong>协议类型</strong></p>
+<h2 id="1-3-HTTP-和HTTPS"><a href="#1-3-HTTP-和HTTPS" class="headerlink" title="1.3 HTTP 和HTTPS"></a>1.3 HTTP 和HTTPS</h2><p><a target="_blank" rel="noopener" href="https://www.taobao.com/">https://www.taobao.com/</a> 中，URL 的开头会有 http 或 https<br>这个就是访问资源需要的协议类型，又是还会看到 ftp、sftp、smb 开头的URL<br><strong>ftp、sftp、smb</strong> 都是指的<strong>协议类型</strong></p>
 <h3 id="HTTP-（Hyper-Text-Transfer-Protocol）超文本传输协议"><a href="#HTTP-（Hyper-Text-Transfer-Protocol）超文本传输协议" class="headerlink" title="HTTP （Hyper Text Transfer Protocol）超文本传输协议"></a>HTTP （Hyper Text Transfer Protocol）超文本传输协议</h3><p>用于从网络传输文本数据到本地浏览器的传送协议，<strong>能保证高效而准确地传送超文本文档</strong><br>由万维网协会（World Wide Web Consortium）和 Internet 工作小组 IETF（Internet Engineering Task Force）共同合作制定的规范<br>目前广泛使用的是 HTTP1.1 版本</p>
 <h3 id="HTTPS-（Hyper-Text-Transfer-Protocol-over-Secure-Socket-Layer）"><a href="#HTTPS-（Hyper-Text-Transfer-Protocol-over-Secure-Socket-Layer）" class="headerlink" title="HTTPS （Hyper Text Transfer Protocol over Secure Socket Layer）"></a>HTTPS （Hyper Text Transfer Protocol over Secure Socket Layer）</h3><p>是以安全为目标的 HTTP 通道，简单讲是 HTTP 的安全版，即 HTTP 下加入 SSL 层，简称为 HTTPS，安全基础是SSL，因此通过它传输的内容都是经过<strong>SSL加密</strong><br>主要作用可以分为两种：</p>
 <ul>
@@ -530,7 +563,7 @@
 <li>谷歌从 2017 年 1 月推出的 Chrome 56 开始，对未进行 HTTPS 加密的网址链接亮出风险提示，即在地址栏的显著位置提醒用户 “此网页不安全”。 </li>
 <li>腾讯微信小程序的官方需求文档要求后台使用 HTTPS 请求进行网络通信，不满足条件的域名和协议无法请求。</li>
 </ul>
-<h3 id="HTTP-请求过程"><a href="#HTTP-请求过程" class="headerlink" title="HTTP 请求过程"></a>HTTP 请求过程</h3> <center>在浏览器中输入一个 URL，回车之后便可以在浏览器中观察到页面内容</center>
+<h2 id="1-4-HTTP-请求过程"><a href="#1-4-HTTP-请求过程" class="headerlink" title="1.4 HTTP 请求过程"></a>1.4 HTTP 请求过程</h2> <center>在浏览器中输入一个 URL，回车之后便可以在浏览器中观察到页面内容</center>
 <center>这个过程是浏览器向网站所在的服务器发送了一个请求</center>
 <center>网站服务器接收到这个请求后进行处理和解析，然后返回对应的响应，接着传回给浏览器。</center>
 响应里包含了页面的源代码等内容，浏览器再对其进行解析，便将网页呈现了出来，传输模型如图所示 ：
@@ -551,9 +584,9 @@
 <p> 我们点击这个条目即可看到其更详细的信息，如图所示。  </p>
 <p><img src="/2022/04/27/python-pa-chong-bi-ji-01-http-ji-ben-yuan-li/1651037663851.png" alt="HTTP请求的详细信息"></p>
 <p> 首先是 General部分，Request URL为请求的 URL，Request Method 为请求的方法，Status Code 为响应状态码，Remote Address 为远程服务器的地址和端口，Referrer Policy为 Referrer 判别策略。 再继续往下，可以看到，有 Response Headers 和 Request Headers，这分别代表响应头和请求头。请求头里带有许多请求信息，例如浏览器标识、Cookies、Host 等信息，这是请求的一部分，服务器会根据请求头 内的信息判断请求是否合法，进而作出对应的响应。图中看到的 Response Headers 就是响应的一部分，例如其中包含了服务器的类型、文档类型、日期等信息，浏览器接受到响应后，会解析响应内容，进而呈 现网页内容。<br>下面我们分别来介绍一下请求和响应都包含哪些内容。 </p>
-<h3 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h3><p> 请求，由客户端向服务端发出，可以分为 4 部分内容：请求方法（Request Method）、请求的网址（Request URL）、请求头（Request Headers）、请求体（Request Body）。 </p>
+<h2 id="1-5-请求"><a href="#1-5-请求" class="headerlink" title="1.5 请求"></a>1.5 请求</h2><p> 请求，由客户端向服务端发出，可以分为 4 部分内容：请求方法（Request Method）、请求的网址（Request URL）、请求头（Request Headers）、请求体（Request Body）。 </p>
 <p><img src="/2022/04/27/python-pa-chong-bi-ji-01-http-ji-ben-yuan-li/1651038019586.png" alt="请求的4部分内容"></p>
-<h4 id="请求方法"><a href="#请求方法" class="headerlink" title="请求方法"></a>请求方法</h4><p>常见的请求方法有两种： GET 和 POST</p>
+<h4 id="1-5-1-请求方法"><a href="#1-5-1-请求方法" class="headerlink" title="1.5.1 请求方法"></a>1.5.1 请求方法</h4><p>常见的请求方法有两种： GET 和 POST</p>
 <ol>
 <li>在浏览器中直接输入 URL 并回车，便发起了一个 <strong>GET</strong> 请求，请求的参数会直接包含到 URL 里<br> 例如，在百度中搜索 Python，这就是一个 GET请求，链接为 <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=Python%EF%BC%8C%E5%85%B6%E4%B8%AD">https://www.baidu.com/s?wd=Python，其中</a> URL中包 含了请求的参数信息，这里参数 wd 表示要搜寻的关键字。</li>
 <li><strong>POST</strong>请求大多在表单提交时发起。<br>   比如，对于一个登录表单，输入用户名和密码后，点击 “登录”按钮，这通常会发起一个 POST请求，其数据通常 以表单的形式传输，而不会体现在 URL中。</li>
@@ -564,8 +597,8 @@
 <li><strong>GET</strong>请求提交的数据最多只有 1024 字节，而 <strong>POST</strong>请求没有限制。</li>
 </ul>
 <p><img src="/2022/04/27/python-pa-chong-bi-ji-01-http-ji-ben-yuan-li/1651038392653.png" alt="请求方法描述表格"></p>
-<h4 id="请求的网址"><a href="#请求的网址" class="headerlink" title="请求的网址"></a>请求的网址</h4><p> 请求的网址，即统一资源定位符 URL，它可以唯一确定我们想请求的资源。 </p>
-<h4 id="请求头"><a href="#请求头" class="headerlink" title="请求头"></a>请求头</h4><p> 请求头，用来说明服务器要使用的附加信息，比较重要的信息有 <strong>Cookie、Referer、User-Agent</strong> 等。下面简要说明一些常用的头信息。 </p>
+<h4 id="1-5-2-请求的网址"><a href="#1-5-2-请求的网址" class="headerlink" title="1.5.2 请求的网址"></a>1.5.2 请求的网址</h4><p> 请求的网址，即统一资源定位符 URL，它可以唯一确定我们想请求的资源。 </p>
+<h4 id="1-5-3-请求头"><a href="#1-5-3-请求头" class="headerlink" title="1.5.3 请求头"></a>1.5.3 请求头</h4><p> 请求头，用来说明服务器要使用的附加信息，比较重要的信息有 <strong>Cookie、Referer、User-Agent</strong> 等。下面简要说明一些常用的头信息。 </p>
 <ul>
 <li><strong>Accept</strong>：请求报头域，用于指定客户端可接受哪些类型的信息。 </li>
 <li><strong>Accept-Language</strong>：指定客户端可接受的语言类型。 </li>
@@ -576,24 +609,24 @@
 <li><strong>User-Agent</strong>：简称 UA，它是一个特殊的字符串头，可以使服务器识别客户使用的操作系统及版本、浏览器及版本等信息。在做爬虫时加上此信息，可以<strong>伪装为浏览器</strong>；如果不加，很可能会被识别出为爬虫。 </li>
 <li><strong>Content-Type</strong>：也叫<strong>互联网媒体类型（Internet Media Type）或者 MIME类型</strong>，在 HTTP 协议消息头中，它用来表示具体请求中的媒体类型信息。例如，text/html代表 HTML格式，image/gif代表 GIF 图 片，application/json代表 JSON 类型，更多对应关系可以查看此对照表：<a target="_blank" rel="noopener" href="http://tool.oschina.net/commons%E3%80%82">http://tool.oschina.net/commons。</a></li>
 </ul>
-<h4 id="请求体"><a href="#请求体" class="headerlink" title="请求体"></a>请求体</h4><p> 请求体一般承载的内容是 POST请求中的表单数据，而对于 GET请求，请求体则为空。  </p>
+<h4 id="1-5-4-请求体"><a href="#1-5-4-请求体" class="headerlink" title="1.5.4 请求体"></a>1.5.4 请求体</h4><p> 请求体一般承载的内容是 POST请求中的表单数据，而对于 GET请求，请求体则为空。  </p>
 <p> 例如，这里我登录 GitHub 时捕获到的请求和响应如图所示。 </p>
 <p><img src="/2022/04/27/python-pa-chong-bi-ji-01-http-ji-ben-yuan-li/1651038827967.png" alt="登录GitHub的请求和响应"></p>
 <p> 登录之前，我们填写了用户名和密码信息，提交时这些内容就会以表单数据的形式提交给服务器，<strong>此时需要注意 Request Headers 中指定 Content-Type 为 application/x-www-form-urlencoded。只有设置 Content-Type 为 application/x-www-form-urlencoded，才会以表单数据的形式提交</strong>。另外，我们也可以将 Content-Type 设置为 application/json来提交 JSON 数据，或者设置为 multipart/form-data 来上传文件。</p>
 <p> 表格中列出了 Content-Type 和 POST提交数据方式的关系。  </p>
 <p><img src="/2022/04/27/python-pa-chong-bi-ji-01-http-ji-ben-yuan-li/1651038945038.png" alt="Content-Type和POST提交数据方式"></p>
-<h3 id="响应"><a href="#响应" class="headerlink" title="响应"></a>响应</h3><p> <strong>由服务端返回给客户端，可以分为三部分</strong>：</p>
+<h2 id="1-6-响应"><a href="#1-6-响应" class="headerlink" title="1.6 响应"></a>1.6 响应</h2><p> <strong>由服务端返回给客户端，可以分为三部分</strong>：</p>
 <ol>
 <li>响应状态码（Response Status Code）</li>
 <li>响应头（Response Headers）</li>
 <li>响应体（Response Body）</li>
 </ol>
-<h4 id="响应状态码"><a href="#响应状态码" class="headerlink" title="响应状态码"></a>响应状态码</h4><p> <strong>响应状态码表示服务器的响应状态</strong> </p>
+<h4 id="1-6-1-响应状态码"><a href="#1-6-1-响应状态码" class="headerlink" title="1.6.1 响应状态码"></a>1.6.1 响应状态码</h4><p> <strong>响应状态码表示服务器的响应状态</strong> </p>
 <p><img src="/2022/04/27/python-pa-chong-bi-ji-01-http-ji-ben-yuan-li/1651039214371.png" alt="响应状态码01"></p>
 <p><img src="/2022/04/27/python-pa-chong-bi-ji-01-http-ji-ben-yuan-li/1651039235649.png" alt="响应状态码02"></p>
 <p><img src="/2022/04/27/python-pa-chong-bi-ji-01-http-ji-ben-yuan-li/1651039258631.png" alt="响应状态码03"></p>
 <p><img src="/2022/04/27/python-pa-chong-bi-ji-01-http-ji-ben-yuan-li/1651039278881.png" alt="响应状态码04"></p>
-<h4 id="响应头"><a href="#响应头" class="headerlink" title="响应头"></a>响应头</h4><p> 响应头包含了服务器对请求的应答信息，如 Content-Type、Server、Set-Cookie 等。下面简要说明一些常用的响应头信息。 </p>
+<h4 id="1-6-2-响应头"><a href="#1-6-2-响应头" class="headerlink" title="1.6.2 响应头"></a>1.6.2 响应头</h4><p> 响应头包含了服务器对请求的应答信息，如 Content-Type、Server、Set-Cookie 等。下面简要说明一些常用的响应头信息。 </p>
 <ul>
 <li><strong>Date</strong>：标识响应产生的时间。 </li>
 <li><strong>Last-Modified</strong>：指定资源的最后修改时间。 </li>
@@ -603,7 +636,7 @@
 <li><strong>Set-Cookie</strong>：设置 Cookies。响应头中的 Set-Cookie 告诉浏览器需要将此内容放在 Cookies 中，下次请求携带 Cookies 请求。 </li>
 <li><strong>Expires</strong>：指定响应的过期时间，可以使代理服务器或浏览器将加载的内容更新到缓存中。如果再次访问时，就可以直接从缓存中加载，降低服务器负载，缩短加载时间。</li>
 </ul>
-<h4 id="响应体"><a href="#响应体" class="headerlink" title="响应体"></a>响应体</h4><p> 最重要的当属<strong>响应体</strong>的内容了。响应的正文数据都在响应体中，<br>比如：</p>
+<h4 id="1-6-3-响应体"><a href="#1-6-3-响应体" class="headerlink" title="1.6.3 响应体"></a>1.6.3 响应体</h4><p> 最重要的当属<strong>响应体</strong>的内容了。响应的正文数据都在响应体中，<br>比如：</p>
 <ul>
 <li>请求网页时，它的响应体就是网页的 HTML代码；</li>
 <li>请求一张图片时，它的响应体就是图片的二进制数据。</li>
@@ -869,7 +902,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            52讲轻松搞定网络爬虫 模块一：爬虫基本原理 02-夯实根基，Web网页基础
+                            52讲轻松搞定网络爬虫 模块一：爬虫基本原理  02-夯实根基，Web网页基础
                         
                     </div>
                     <div class="publish-info">
@@ -1089,8 +1122,6 @@
 <style>
     .aplayer .aplayer-lrc p {
         
-        display: none;
-        
         font-size: 12px;
         font-weight: 700;
         line-height: 16px !important;
@@ -1098,19 +1129,8 @@
 
     .aplayer .aplayer-lrc p.aplayer-lrc-current {
         
-        display: none;
-        
         font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
+        color: deeppink;
     }
 
     
@@ -1124,7 +1144,7 @@
                    id="6698809494"
                    fixed='true'
                    autoplay='false'
-                   theme='#42b983'
+                   theme='deeppink'
                    loop='all'
                    order='random'
                    preload='auto'
@@ -1152,7 +1172,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">12.9k</span>&nbsp;字
+                class="white-color">19.1k</span>&nbsp;字
             
             
             
@@ -1463,6 +1483,11 @@ $(function () {
 
 	
     
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
 
     
 
@@ -1472,6 +1497,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"right","hOffset":25,"vOffset":-20},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
 
 </html>
