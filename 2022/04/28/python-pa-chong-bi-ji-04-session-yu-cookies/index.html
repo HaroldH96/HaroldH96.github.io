@@ -1182,6 +1182,10 @@ WIDGET = {
     </div>
 </article>
 
+<!-- 修复使用pjax切换页面后 文章卡片特效消失问题  -->
+<script src="/js/matery.js"></script>
+<!-- <script src="/libs/tocbot/tocbot.min.js"></script> -->
+
 </div>
 
 
@@ -1204,6 +1208,7 @@ WIDGET = {
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
+
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         <div class="toc-widget card" style="background-color: white;">
@@ -1222,10 +1227,10 @@ WIDGET = {
 </div>
 
 
-<!-- <script src="/libs/tocbot/tocbot.min.js"></script> -->
+<script src="/libs/tocbot/tocbot.min.js"></script>
 <script>
-
-$.getScript("/libs/tocbot/tocbot.min.js",function(){
+// $.getScript("/libs/tocbot/tocbot.min.js")
+$(function(){
     //重载函数
 // })
 
@@ -1303,6 +1308,7 @@ $.getScript("/libs/tocbot/tocbot.min.js",function(){
     })
 </script>
 
+
     
 
 </main>
@@ -1317,16 +1323,12 @@ $.getScript("/libs/tocbot/tocbot.min.js",function(){
 <style>
     .aplayer .aplayer-lrc p {
         
-        display: none;
-        
         font-size: 12px;
         font-weight: 700;
         line-height: 16px !important;
     }
 
     .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
         
         font-size: 15px;
         color: deeppink;

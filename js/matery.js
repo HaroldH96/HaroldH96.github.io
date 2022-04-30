@@ -1,4 +1,4 @@
-$.getScript("https://cdn.jsdelivr.net/npm/pjax/pjax.min.js")
+// $.getScript("https://cdn.jsdelivr.net/npm/pjax/pjax.min.js")
 $(function () {
     /**
      * 添加文章卡片hover效果.
