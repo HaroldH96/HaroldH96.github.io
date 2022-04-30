@@ -167,7 +167,7 @@
 
    <style>
     body{
-       background-image: url(https://s1.ax1x.com/2022/04/28/LOnR81.jpg);
+       background-image: url(/medias/background.jpg);
        background-repeat:no-repeat;
        background-size:cover;
        background-attachment:fixed;
@@ -281,6 +281,8 @@
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
+                <!-- 和风天气插件 -->
+                <div id="he-plugin-simple"></div>
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
@@ -288,8 +290,6 @@
                     
                     <span class="logo-span">Harold</span>
                 </a>
-                <!-- 和风天气插件 -->
-                <div id="he-plugin-simple"></div>
             </div>
             
 
@@ -378,8 +378,39 @@
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
     </a>
   </li>
+  <!-- <li class="hide-on-med-and-down nav-item">
+    <div id="he-plugin-simple"></div>
+  </li> -->
 </ul>
 
+<!-- <script>
+WIDGET = {
+  "CONFIG": {
+    "modules": "01234",
+    "background": "1",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "FFFFFF",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "10",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "right",
+    "right": "-150",
+    "top": "15",
+    "key": "9c5ac579913f4fe092fff8ea56d77f9b"
+  }
+}
+</script>
+<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
+ -->
 
 <div id="mobile-nav" class="side-nav sidenav">
 
@@ -572,7 +603,7 @@ WIDGET = {
     "fixed": "true",
     "vertical": "top",
     "horizontal": "left",
-    "left": "130",
+    "left": "-200",
     "top": "15",
     "key": "9c5ac579913f4fe092fff8ea56d77f9b"
   }
@@ -1375,7 +1406,7 @@ hexo g -d等价于hexo generate --deploy
 <script src="/libs/tocbot/tocbot.min.js"></script>
 <script>
 // $.getScript("/libs/tocbot/tocbot.min.js")
-$(function(){
+$.getScript("/libs/tocbot/tocbot.min.js", function(){
     //重载函数
 // })
 
@@ -1527,7 +1558,7 @@ $(function(){
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">19.2k</span>&nbsp;字
+                class="white-color">25.5k</span>&nbsp;字
             
             
             

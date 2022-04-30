@@ -167,7 +167,7 @@
 
    <style>
     body{
-       background-image: url(https://s1.ax1x.com/2022/04/28/LOnR81.jpg);
+       background-image: url(/medias/background.jpg);
        background-repeat:no-repeat;
        background-size:cover;
        background-attachment:fixed;
@@ -281,6 +281,8 @@
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
+                <!-- 和风天气插件 -->
+                <div id="he-plugin-simple"></div>
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
@@ -288,8 +290,6 @@
                     
                     <span class="logo-span">Harold</span>
                 </a>
-                <!-- 和风天气插件 -->
-                <div id="he-plugin-simple"></div>
             </div>
             
 
@@ -378,8 +378,39 @@
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
     </a>
   </li>
+  <!-- <li class="hide-on-med-and-down nav-item">
+    <div id="he-plugin-simple"></div>
+  </li> -->
 </ul>
 
+<!-- <script>
+WIDGET = {
+  "CONFIG": {
+    "modules": "01234",
+    "background": "1",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "FFFFFF",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "10",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "right",
+    "right": "-150",
+    "top": "15",
+    "key": "9c5ac579913f4fe092fff8ea56d77f9b"
+  }
+}
+</script>
+<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
+ -->
 
 <div id="mobile-nav" class="side-nav sidenav">
 
@@ -572,7 +603,7 @@ WIDGET = {
     "fixed": "true",
     "vertical": "top",
     "horizontal": "left",
-    "left": "130",
+    "left": "-200",
     "top": "15",
     "key": "9c5ac579913f4fe092fff8ea56d77f9b"
   }
@@ -636,7 +667,7 @@ WIDGET = {
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/">8</a></span>
+    <span class="count"><a href="/">10</a></span>
     <span class="name">文章</span>
 </div>
 
@@ -650,7 +681,7 @@ WIDGET = {
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">5</a></span>
+    <span class="count"><a href="/tags">9</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -666,7 +697,7 @@ WIDGET = {
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/">8</a></span>
+    <span class="count"><a href="/">10</a></span>
     <span class="name">文章</span>
 </div>
 
@@ -680,7 +711,7 @@ WIDGET = {
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">5</a></span>
+    <span class="count"><a href="/tags">9</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -818,7 +849,7 @@ WIDGET = {
                     name: '文章篇数',
                     type: 'line',
                     color: ['#6772e5'],
-                    data: [0,0,0,0,0,0,0,0,0,0,0,0,8],
+                    data: [0,0,0,0,0,0,0,0,0,0,0,0,10],
                     markPoint: {
                         symbolSize: 45,
                         color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -860,7 +891,7 @@ WIDGET = {
                     type: 'pie',
                     radius: '50%',
                     color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                    data: [{"name":"Python","value":5},{"name":"hexo","value":2}],
+                    data: [{"name":"Python","value":7},{"name":"hexo","value":2}],
                     itemStyle: {
                         emphasis: {
                             shadowBlur: 10,
@@ -884,7 +915,7 @@ WIDGET = {
             xAxis: [
                 {
                     type: 'category',
-                    data: ["python","爬虫","笔记","hexo","主题"]
+                    data: ["python","爬虫","笔记","hexo","HTML","css","JavaScript","jquery","主题"]
                 }
             ],
             yAxis: [
@@ -897,7 +928,7 @@ WIDGET = {
                     type: 'bar',
                     color: ['#82d3f4'],
                     barWidth : 18,
-                    data: [5,5,5,2,1],
+                    data: [7,6,6,2,1,1,1,1,1],
                     markPoint: {
                         symbolSize: 45,
                         data: [{
@@ -1020,7 +1051,7 @@ WIDGET = {
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">19.2k</span>&nbsp;字
+                class="white-color">25.5k</span>&nbsp;字
             
             
             
