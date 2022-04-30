@@ -6,7 +6,7 @@ function buble () {
     color: 'rgba(255,255,255,.4)',
     clearOffset: 0.99
   });
-} ! function (p) {
+}! function (p) {
   p.fn.circleMagic = function (t) {
     var o, a, n, r, e = !0,
       i = [],
@@ -63,4 +63,3 @@ function buble () {
   }
 }(jQuery);
 buble()
-
